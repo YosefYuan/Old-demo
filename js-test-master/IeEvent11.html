@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="test" id='btn' />
+		<script type="text/javascript">
+			var btn=document.getElementById('btn');
+			btn.onclick=function(){
+				alert(window.event.srcElement===this);
+			}
+			btn.attachEvent('onclick',function(event){
+				alert(event.srcElement===this);
+			});
+		</script>
+	</body>
+</html>

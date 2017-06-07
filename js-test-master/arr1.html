@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr=[1,2,3];
+			Object.defineProperty(arr,'length',{
+				writable:false
+			});
+			console.log(arr.length);
+			arr.length=10;
+			console.log(arr.length);
+		</script>
+	</body>
+</html>

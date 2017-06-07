@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task09</title>
+	<link rel="stylesheet" href="taskY09.css" type="text/css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<nav class="clearfix">
+				<address>客服电话：010-594-78634</address>
+				<a href="#">注册</a>
+				<a href="#">登录</a>
+			</nav>
+			<nav class="clearfix">
+				<a href="#">品质保障</a>
+				<a href="#">标准箱子</a>
+				<a href="#">在线定制</a>
+				<a href="#">首页</a>
+			</nav>
+		</header>
+		<article>
+			<section class="clearfix">
+				<ul>
+					<li>1.定制纸箱</li><li>2.选择数量</li><li>3.上传附件</li><li>4.确认下单</li>
+				</ul>
+			</section>
+			<form action="post" action="">
+				<fieldset>
+					<legend>请您按照以下步骤来定制您的纸箱</legend>
+					<section class="form_1">
+						<h4><img src="images/box.png" alt="">选择箱型</h4>
+						<label><input checked="checked" type="radio" id="box1" name="box" value="box1">对口箱</label>
+						<label><input type="radio" id="box2" name="box" value="box2">飞机盒</label>
+						<label><input type="radio" id="box3" name="box" value="box3">天地盖</label>
+					</section>
+					<section class="form_2">
+						<h4><img src="images/Ruler.png" alt="">确定尺寸</h4>
+						<div class="clearfix">
+							<label><input checked="checked" type="radio" id="outsize" name="size" value="outsize">外径</label>
+							<label>长<input type="text" id="out_length" name="out_length">mm</label>
+							<label>宽<input type="text" id="out_width" name="out_width">mm</label>
+							<label>高<input type="text" id="out_height" name="out_height">mm</label>
+						</div>
+						<div class="clearfix">
+							<label><input checked="checked" type="radio" id="insize" name="size" value="insize">外径</label>
+							<label>长<input type="text" id="in_length" name="in_length">mm</label>
+							<label>宽<input type="text" id="in_width" name="in_width">mm</label>
+							<label>高<input type="text" id="in_height" name="in_height">mm</label>
+						</div>
+					</section>
+					<section class="form_3">
+						<h4><img src="images/Cut _ Scissors.png" alt="">选择材质</h4>
+						<label><input checked="checked" type="radio" id="" name="material" value="A">三层A瓦优质</label>
+						<label><input type="radio" id="" name="material" value="B">三层B瓦优质</label>
+						<label><input type="radio" id="" name="material" value="C">三层C瓦优质</label>
+						<label><input type="radio" id="" name="material" value="D">三层D瓦优质</label>
+						<label><input type="radio" id="" name="material" value="E">三层E瓦优质</label>
+					</section>
+				</fieldset>
+				<label><input type="submit" value="下一步"></label>
+			</form>
+		</article>
+	</div>
+</body>
+</html>

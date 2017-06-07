@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="EventUtil.js" type="text/javascript" charset="UTF-8"></script>
+	</head>
+	<body>
+		<input type="button" value="test" name='btn1' id='btn1' />
+		<div id="box1"><input type="text" /></div>
+		<script type="text/javascript">
+			var btn1=document.getElementById("btn1");
+			EventUtil.addHandler(btn1,'click',function(event){
+				event=EventUtil.getEvent(event);
+				var target=EventUtil.getTarget(event);
+				alert(target.tagName);
+			}); 
+		</script>
+	</body>
+</html>

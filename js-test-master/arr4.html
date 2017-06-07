@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr=['a','b','c','d'];
+			var res=arr.join('');
+			console.log(res);
+			
+			res=arr.reverse();
+			console.log(res);
+			
+			
+			var arr=['a','b','c','A','B','C'];
+			arr.sort();
+			console.log(arr);
+			
+			 var arr=[1,2,3,34,24];
+			 arr.sort(function(a,b){
+			 	return a-b;
+			 });
+			 console.log(arr);
+			 
+			 
+			 var users=[
+			 	{name:'king',age:12},
+			 	{name:'jing',age:52},
+			 	{name:'ting',age:17},
+			 	{name:'wing',age:82},
+			 ];
+			 users.sort(function(a,b){
+			 	if(a.name>b.name)return 1;
+			 	if(a.name<b.name)return -1;
+			 	return 0;
+			 });
+			 for(var i in users){
+			 	console.log(users[i]['name']);
+			 }
+			 
+			 var arr=[1,2,3];
+			 res=arr.concat(4,5,6);
+			 res=arr.concat([4,5]);
+			 res=arr.concat([11,[12,[33]]]);
+			 console.log(res);
+			 
+			 
+			 var arr=['a','b','c','d','e'];
+			 res=arr.slice(2,-2);
+			 console.log(res);
+			 
+			 
+			 var arr=['a','b','c','d','e','f','g','h'];
+			 res=arr.splice(0,2,'g','h');
+			 console.log(res);
+			 console.log(arr);
+			 
+			 var arr=[1,2,3,4,5];
+			 res=arr.map(function(x){
+			 	return x*x;
+			 });
+			 console.log(res);
+			 
+			 
+			 var arr=['a!','b!','c','d!','e'];
+			 res=arr.map(function(x){
+			 	return x.replace(/!/g,"").toUpperCase();
+			 });
+			 console.log(res);
+			 
+			 
+			 var arr=[1,4,4,,43263,23423,342];
+			 res=arr.filter(function(x){
+			 	return x>100;
+			 });
+			 console.log(res);
+			 
+			 
+			 var arr=[1,2,3,4,5];
+			 res=arr.reduce(function(a,b){
+			 	return a+b;
+			 },10);
+			 console.log(res);
+			 
+			 var age=[12,34,45,34];
+			 res=age.every(function(x){
+			 	return x>=18;
+			 });
+			 res=age.some(function(x){
+			 	return x>=18;
+			 });
+			 console.log(res);
+			 
+			 
+			 var arr=['a','b','c','d','e','a','b','c'];
+			 res=arr.indexOf('b');
+			 res=arr.indexOf('A');
+			 res=arr.indexOf('b',2);
+			 res=arr.lastIndexOf('c');
+			 console.log(res);
+			 
+			 
+			 console.log(Array.isArray(arr));
+			 console.log(Array.isArray([]));
+			 console.log(Array.isArray({}));
+			 
+			 console.log(arr.toString());
+			 console.log(arr.join());
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

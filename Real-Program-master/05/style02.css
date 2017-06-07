@@ -1,0 +1,132 @@
+
+/* all */
+#all{
+	width:720px;
+	height: 1280px;
+	margin:0 auto;
+	background-color: #fff;
+}
+/* header */
+#header{
+	width:100%;
+	height: 40px;
+	background-color: #5fc0cd;
+}
+/* nav */
+#nav{
+	width:100%;
+	height: 85px;
+	line-height: 85px;
+/* 	background-color: #5fc0cd; */
+	background-color: #555;
+	color: #fff;
+	font-size: 32px;
+	font-family: "微软雅黑";
+}
+ #nav div,img{
+ 	line-height: 70px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#nav img{
+	float: right;
+	margin-right: 30px;
+	margin-top: 22px;
+}
+
+#nav div div{
+	background-color: red;
+	padding-left: 20px;
+	padding-right: 20px;
+ 	border-radius: 20px;
+}
+#nav div div:first-child{
+	margin-left:217px; 
+}
+/* select */
+#select{
+	width: 100%; 
+	height: 80px;
+	line-height: 50px; 
+	background-color: #fff;
+	font-size: 26px;
+	font-family: "微软雅黑";
+}
+#select select{
+	border:none;
+	color: #999;
+	font-size: 26px;
+	font-family: "微软雅黑";
+}
+#select li{
+	display: inline-block;
+	width: 32%;
+	padding-right: 1%;
+	margin-top: 13px;
+	vertical-align: center;
+	border-right: solid 1px #e2e6e7;
+	text-align: center;
+	color: #999;
+	background:url(icon02/icon02.png) right top no-repeat;
+	background-position: right 20px top 23px;
+}
+/*  content */
+#content ul{
+	width: 660px;
+	height: 180px;
+	color: #999;
+	background-color: #fff;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-top:solid 1px #e1e5e7;
+	font-size: 24px;
+	font-family: "微软雅黑";
+}
+#content ul li{
+	height: 60px;
+	line-height: 60px;
+}
+#content ul li:last-child{
+	font-size: 20px;
+}
+#content ul li img{
+	padding-right: 15px;
+}
+#content ul li div{
+	display: inline-block;
+	font-weight: bold;
+}
+#content ul li div:first-child{
+	color:#333;
+}
+#content ul li div:last-child{
+	float: right;
+	color: #e63b0e;
+}
+#content ul li div:last-child img{
+	padding-left: 22px;
+}
+/* footer */
+#footer{
+	width: 80%;
+	height: 100px;
+	margin: 10px auto;
+}
+#footer a{
+	color: #5fc0cd;
+}
+#footer div{
+	float: left;
+	margin: 0 64px;
+	height: 100px;
+}
+#footer div:first-child a{
+	line-height: 50px;
+	text-align: center;
+	vertical-align: middle;
+}
+#footer div:last-child a{
+	line-height: 50px;
+	text-align: center;
+	vertical-align: middle;
+}

@@ -1,0 +1,132 @@
+body{
+	background-color: red;
+}
+/* all */
+#all{
+	width:720px;
+	height: 1280px;
+	margin:0 auto;
+	background-color: #fff;
+}
+/* header */
+#header{
+	width:100%;
+	height: 40px;
+	background-color: #5fc0cd;
+}
+/* nav */
+#nav{
+	width:100%;
+	height: 85px;
+	line-height: 85px;
+	background-color: #5fc0cd;
+	color: #fff;
+	font-size: 34px;
+	font-family: "微软雅黑";
+}
+#nav img,p{
+	display: inline-block;
+	vertical-align: middle;
+
+}
+#nav img{
+	margin-left: 35px;
+}
+#nav p{
+	margin-left: 234px;
+}
+/* pic */
+#pic{
+	width:100%;
+	height: 327px;
+	background-color: #888;
+	background: url(images/longmao.jpg) 0 -40px no-repeat;
+	overflow: hidden;
+	font-family: "微软雅黑";
+
+}
+#pic img{
+	width:200px;
+	height: 200px;
+	margin-top: 63px;
+	margin-left: 30px;
+	border-radius: 100px;
+}
+ #pic img,div{
+	display: inline-block;
+	vertical-align: middle;
+} 
+#pic div{
+	margin-top: 63px;
+	margin-left: 40px;
+	color: #555;
+	line-height: 50px;
+}
+#pic .b{
+	font-size: 33px;
+}
+#pic .s{
+	font-size: 23px;
+	background: url(icon/icon01.png) center left no-repeat;
+	padding-left: 20px;
+}
+/* content */
+#content{
+	font-family: "微软雅黑";
+	width: 600px;
+	margin-top: 36px;
+	margin-left:60px;
+	
+}
+#start h1{
+	font-size: 32px;
+}
+#start div{
+	background: url(icon/icon02.png) center left no-repeat;
+	font-size: 30px;
+	padding-left: 40px;
+	padding-right: 30px;
+
+}
+#content table{
+	font-size: 30px;
+} 
+#content table tr{
+	height: 126px;
+	line-height: 126px;
+}
+#content table tr:last-child{
+	height: 42px;
+	line-height: 42px;
+}
+#content table th{
+	width:140px;
+}
+#content table tr td{
+	padding-left: 50px;
+}
+/* contact */
+#contact{
+	margin-top: 50px;
+	margin-left: 37px;
+}
+#contact div{
+	width: 310px;
+	height: 84px;
+	line-height: 84px;
+	text-align: center;
+	border:solid 2px #5fc0cd;
+	border-radius: 8px;
+	font-size:32px;
+	font-family: "微软雅黑"; 
+	margin-right: 25px;
+}
+#contact div:first-child a{
+	color: #5fc0cd;
+}
+#contact div:last-child{
+	background-color: #5fc0cd;
+}
+#contact div:last-child a{
+	color: #fff;
+}

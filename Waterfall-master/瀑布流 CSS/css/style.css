@@ -1,0 +1,30 @@
+#main{
+    -webkit-column-width:217px;/*chrome and safari*/
+    -moz-column-width:217px;/*firefox*/
+    -o-column-width:217px;/*opera*/
+    -ms-column-width:217px;/*IE*/
+
+    -webkit-column-rule:2px dashed #f00;/*chrome and safari*/
+    -moz-column-rule:2px dashed #f00;/*firefox*/
+    -o-column-rule:2px dashed #f00;/*opera*/
+    -ms-column-rule:2px dashed #f00;/*IE*/
+
+    -webkit-column-gap:5px;/*chrome and safari*/
+    -moz-column-gap:5px;/*firefox*/
+    -o--column-gap:5px;/*opera*/
+    -ms-column-gap:5px;/*IE*/
+}
+.box{
+    padding:10px 0 0 15px;
+}
+.pic{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    width:180px;
+}
+.pic img{
+    display: block;
+    width: 180px;
+}

@@ -1,0 +1,140 @@
+/* all */
+*{
+	padding:0;
+	margin:0;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+	color: #999;
+}
+.clearfix:after{
+	content: ".";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+#wrapper{
+	width: 1920px;
+	background:#fff;
+}
+li{
+	list-style: none;
+}
+/* header */
+header>nav:first-child{
+	padding: 0 360px;
+	background: #1d7ad9;
+	color: #fff;
+	line-height: 40px;
+}
+header>nav:first-child address{
+	float: left;
+}
+header>nav:first-child a{
+	color: #fff;
+	float: right;
+	padding: 0 30px;
+}
+header>nav:first-child a:hover{
+	background: #fff;
+	color: #000;
+}
+header>nav:last-child{
+	padding:0 360px;
+}
+header>nav:last-child a{
+	color: #000;
+	float: right;
+	margin:50px;
+	padding:20px;
+	border:solid 1px #e6e6e6;
+	border-top: none;
+	border-left: none;
+	border-radius: 5px;
+}
+header>nav:last-child a:first-child{
+	margin-right: 0;
+}
+header>nav:last-child a:hover{
+	background: #1d7ad9;
+	color: #fff;
+}
+/* article */
+article{
+	padding:0 360px;
+}
+article>section ul{
+	margin-top: 50px;
+	float: right;
+}
+article>section li{
+	position: relative;
+	display: inline;
+	color: #ccc;
+	padding: 35px;
+	border-top: solid 5px #ccc; 
+}
+article>section li:first-child{
+	border-color:#ff7f02;
+}
+article>section li:before{
+	position: absolute;
+	top:-16px;
+	left:60px;
+	text-align: center;
+	line-height: 27px;
+	width: 27px;
+	height: 27px;
+	border-radius: 14px;
+	background: #ccc;
+	color: #fff;
+	font-size: 16px;
+	content: "1";
+}
+article>section li:first-child:before{
+	background:#ff7f02; 
+}
+article>section li:nth-child(2):before{
+	content: "2";
+}
+article>section li:nth-child(3):before{
+	content: "3";
+}
+article>section li:nth-child(4):before{
+	content: "4";
+}
+article>form{
+	margin-top:50px; 
+}
+article>form legend{
+	padding-bottom:16px; 
+	font-size: 22px;
+}
+article h4{
+	padding-left: 16px;
+	font-size: 18px;
+	font-weight: normal;
+	background: #f4f4f4;
+	color: #1d7ad9;
+	height: 40px;
+	line-height: 40px;
+}
+article form label{
+	display: inline-block;
+	color: #666;
+	margin:40px;
+
+}
+article .form_2 input{
+	width: 70px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+article .form_2>div>label:first-child input{
+	width: 50px;
+	text-align: left;
+	margin: 0;
+	background: #444;
+}

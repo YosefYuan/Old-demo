@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*res=/o{2}/.test('gogle');
+			console.log(res);*/
+			var str='this is a test hello maizi hello world';
+			var patt=/i/ig;
+			var myArr;
+			while((myArr=patt.exec(str))!==null){
+				var msg='找到了'+myArr[0]+'1';
+				msg+='下一个匹配从'+patt.lastIndex;
+				console.log(msg);
+				
+				var str='2016-05-05';
+				res=str.replace(/(\d{4})-(\d{2})-(\d{2})/,'$2/$3/$1')
+				console.log(res);
+				
+				
+				
+			} 
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

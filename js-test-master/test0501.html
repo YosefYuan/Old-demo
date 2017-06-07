@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*var sum=0;
+			for(var i=0;i<=20;i++){ 	
+				for(var j=0;j<=33;j++){
+					for(var z=0;z<=100;z++){
+						if((i+j+z==100)&&(5*i+3*j+z/3==100)){
+							document.write('公鸡'+i+'母鸡'+j+'小鸡'+z+';<hr />')
+						}
+					}
+				}
+			}*/
+			var sum=0;
+			for(var i=0;i<=20;i++){
+				for(var j=0;j<=33;j++){
+					var z=100-i-j;
+					if(5*i+3*j+z/3==100){
+						document.write('公鸡'+i+'母鸡'+j+'小鸡'+z+'<hr />')
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

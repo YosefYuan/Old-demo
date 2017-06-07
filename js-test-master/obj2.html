@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var obj={};
+			obj.username='king',
+			obj.age=12,
+			obj.addr='北京',
+			console.log(obj.username+'\n'+obj['age']);
+			for(var p in obj){
+				console.log(p+'\n');
+			}
+			
+			
+			function Person(username,age,sex,addr){
+				this.username=username;
+				this.age=age;
+				this.sex=sex;
+				this.addr=addr;
+				this.info=function(){
+					return this.username+this.addr;
+				}
+			}
+			var p1=new Person('Y',27,'男','上海');
+			console.log(p1.info());
+			
+			
+			 
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

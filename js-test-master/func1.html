@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		/*	test();
+			function test(){
+				alert('this is a test');
+			}*/
+//			test();
+			/*function calc1(num1,num2){
+				num1=num1||1;
+				num2=num2 ||2;
+				return num1+num2;
+			}
+			alert(calc1());*/
+			function calc(x,y){
+				x=arguments[0]?arguments[0]:0;
+				y=argument[1]?arguments[1]:0;
+				return x+y;
+			}
+			/*alert(calc());
+			alert(calc(1,2));*/
+			/*function test(){
+				var paramsNum=arguments.length;
+				var sum=0;
+				for(var i=0;i<paramsNum;i++){
+					sum+=arguments[i];
+				}
+				return sum;
+			}
+			alert(test(1,3,3,4,3,2,4));*/
+			function test1(){
+				var paramsNum=arguments.length;
+				var max=0;
+				for (var i=0;i<=paramsNum-1;i++){
+					if(arguments[i]>max){
+						max=arguments[i];
+					}
+				}
+				return max;
+			}
+			alert(test1(123,34,23456,366))
+ 		</script>
+	</body>
+</html>

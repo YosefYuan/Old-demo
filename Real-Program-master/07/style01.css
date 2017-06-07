@@ -1,0 +1,298 @@
+*{
+	padding: 0;
+	margin:0;
+	font-family: "微软雅黑";
+	text-decoration: none; 
+}
+/* head */
+#head{
+	margin:0 auto;
+	width:1920px;
+	height: 740px;
+	background: url(images/head.png) no-repeat;
+}
+/* h01 */
+#h01{
+	width:auto;
+	height: 39px;
+	background-color: #222;
+}
+#h01in{
+	margin:0 auto;
+	width: 1200px;
+	height: 39px;
+	line-height: 39px;
+	font-size: 14px;
+	color: #29b078;
+}
+#h01in img{
+	float: right;
+	margin-top: 7px;
+	margin-left: 16px;
+}
+/* h02 */
+#h02{
+	width: auto;
+	height: 99px;
+ 	background-color: #29b078;
+ }
+ #h02in{
+ 	margin:0 auto;
+	width: 1200px;
+	height: 99px;
+	line-height: 95px;
+ }
+ #h02in ul{
+ 	font-size: 16px;
+ 	float: right;
+ 	padding-bottom: 30px;
+ }
+ #h02in ul li{
+	display: inline;
+	margin-left: 32px;
+	margin-right: 32px;
+	color: #fff;
+ }
+ #h02in a:active{
+	border-bottom: solid 4px #fff;//有些问题
+ }
+/* content */
+#content{
+	margin:0 auto;
+	width: 1200px;
+	height: 2100px;/* 
+	background-color: #999; */
+}
+/* c01 */
+#c01{
+	width: 100%;
+	height: 290px;/*
+	background-color: #555;*/
+	padding-top: 160px;
+}
+#c01 .li{
+	width: 224px;
+	height: 200px;
+	text-align: center;
+	float: left;
+	margin-right: 100px;
+}
+#c01 .li img{
+	height: 62px;
+}
+#c01 .li h3{
+	margin:30px auto;
+}
+#c01 .li p{
+	text-align: left;
+}
+#sum{
+	font-size: 17px;
+	width: 228px;
+	padding-top: 53px;
+	color: #999;
+	float: left;
+}
+#sum ul{
+	padding-bottom: 20px;
+}
+#sum ul li{ 
+	list-style: none;  
+	margin-bottom: 10px;
+}
+#sum ul li:first-child{
+	color: #26a26f;
+	font-weight: bold;
+	padding-left: 16px;
+	background: url(images/未标题-1_34.png) center left no-repeat;
+}
+/* c02 */
+#c02{
+	width: 100%;
+	height: 450px;/*
+	background-color: #777;*/
+}
+#c02 h3{
+	text-align: center;
+}
+#c02 .line{
+	width: 100%;
+	height: 72px;
+	margin:80px auto;/*
+	background-color: #444;*/
+	font-size: 15px;
+}
+#c02 .line div{
+	float:left;
+	width: 240px;
+	height: 72px;
+}
+#c02 .line .num div{
+	text-align: center;
+	color: #29b078;
+	line-height: 68px;
+	width: 68px;
+	height: 68px;
+	margin-right: 15px;
+	border-radius: 34px;
+	border:solid 1px #777;
+	box-shadow: 1px 1px 0px #ececec;
+}
+#c02 .line .img{
+	width: 80px;
+	height: 72px;
+	margin-top: 23px;
+	display: inline-block;
+	text-align: center;
+}
+#c02 .line .num p{
+	color: #999;
+	line-height: 28px;
+	margin-top: 6px;
+}
+/* c03 */
+#c03{
+	width: 100%;
+	height: 620px;/* 
+	background-color: #aaa; */
+}
+#h3{
+	padding-top:50px;
+	padding-bottom:80px;
+}
+#c03 h3{
+	text-align: center;
+}
+#c03 .person{
+	text-align: center;
+	float: left;
+	margin-right: 34px;
+	margin-bottom: 30px;
+	width: 268px;
+	height: 368px;
+	border: solid 1px #eee;
+	border-radius: 10px;
+}
+#c03 .person p{
+	text-align: left;
+	margin:5px;
+	margin-top: 20px;
+	text-align: justify;
+}
+#c03 .person img{
+	margin-top: 30px;
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+	display: inline;
+}
+#c03 #r{
+	float: right;
+	margin-right: 0;
+}
+#btn{
+	width: 100%;
+	height: 30px;
+	margin:50px 555px;
+}
+#btn button{
+	display: inline-block;
+	margin-right: 5px;
+	width: 13px;
+	height: 13px;
+	border-radius: 6px;
+	background-color: #29b078;
+	border:solid 1px #bbb;
+}
+/* c04 */
+#c04{
+	width: 100%;
+	height: 320px;
+	padding-top: 60px;
+	text-align: center;/* 
+	background-color: #555; */
+}
+#c04 li{
+	margin-top:80px; 
+	display: inline-block;
+	width: 25%;
+	height: 80px;
+}
+/* c05 */
+#c05{
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	color: #a1a1a1;
+	/* 
+	background-color: #222; */
+}
+#c05 h3{
+	line-height: 80px;
+	color: #000;
+}
+#c05 li{
+	display: inline-block;
+	width: 10%;
+	height: 30px;
+	line-height: 50px;
+}
+#c05 li a{ 
+	color: #999; 
+}
+/* footer */
+#footer{
+	margin:0 auto;
+	width: 1920px;
+	height: 200px; 
+	background-color: #26a26f; 
+	color: #fff;
+}
+#footer .l01{
+	margin: 0 auto;
+	width: 1200px;
+	height: 169px;
+}
+#footer .l01 a{
+	padding-left: 1px;
+	padding-right: 7px;
+	color: #fff;
+	border-right: solid 1px #fff;
+}
+#footer .l01 div{
+	margin-right: 8%;
+	width: 25%;
+	height: 169px;
+	float: left;
+}
+#footer .l01 div li{
+	margin-left: 6px;
+	margin-right: 6px;
+}
+#footer .l01 div h4{
+	margin-top:20px;
+	margin-bottom:70px;
+}
+#footer .l01 #pic{
+	width: 10%;
+	height: 169px;
+	margin-right: 0;
+	float: right;
+}
+ #footer .l01 #pic h4{
+	margin-bottom: 10px;
+} 
+#footer .l01 #pic{
+	text-align: center;
+}
+#footer .l01 div li{
+	list-style: none;
+	display: inline-block;
+}
+#footer .l02{
+	width: 100%;
+	height: 30px;
+}
+#footer .ff{
+	text-align: center;
+}

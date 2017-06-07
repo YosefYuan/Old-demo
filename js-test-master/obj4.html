@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*function Foo(){};
+			Foo.prototype.z=3;
+			var obj=new Foo();
+			obj.x=1;
+			obj.y=2;
+			console.log('x'in obj);
+			console.log(obj.hasOwnProperty('x'));
+			console.log(obj.propertyIsEnumerable('x'));
+			console.log('z'in obj);
+			console.log(obj.hasOwnProperty('z'));
+			console.log(obj.propertyIsEnumerable('z'));
+			console.log(Object.prototype.propertyIsEnumerable('toString'));*/
+			
+			
+			var obj={
+				x:1,
+				y:2,
+				z:3,
+				username:'king',
+				age:12,
+				addr:'北京'
+			};
+			for(var p in obj){
+				console.log(p);
+			}
+			console.log(Object.getOwnPropertyNames(obj));
+			console.log(Object.keys(obj));
+			
+				
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

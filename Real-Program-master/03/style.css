@@ -1,0 +1,109 @@
+body{
+	background-color:#fff;
+	margin:0;
+	padding: 0;
+}
+/* reset */
+#all{
+	width: 640px;
+	height:1136px;
+	margin:0 auto;
+}
+/* 头部 */
+#header{
+	width:640px;
+	height: 39px;
+	background-color:#32302b;
+}
+/* 导航条 */
+#nav{
+	width: 640px;
+	height: 88px;
+	background-color: #234249;
+	font-family: "微软雅黑";
+	display: inline-block;
+
+}
+#nav01{
+	font-size:24px;
+	float:left;
+	width: 200px;
+	height: 88px;
+	line-height: 88px;
+	vertical-align: middle;
+	background:url(images/nav01.png) left center no-repeat;
+	background-position: 17px;
+}
+#nav01 a{
+	color:#fff;
+	margin-left: 50px;
+	text-decoration: none;
+}
+#nav02{
+	font-size: 32px;
+	color:#fff;
+	display: inline-block;
+	height: 88px;
+	width: 220px;
+	line-height: 88px;
+	text-align: center;
+}
+#nav03{
+	float:right;
+	width:200px;
+	height: 36px;
+
+}
+#nav03 a{
+	float: right;
+	height: 88px;
+	line-height: 88px;
+	vertical-align: middle;
+	margin-right: 18px;
+}
+
+/* 内容 */
+#content{
+	width: 640px;
+	height: 1009px;
+	background-color:#5fced8;
+}
+/* 01 内容-文字 */
+#t{
+	background-color: #fff;
+	width:640px;
+	height: 676px;
+	background: url(images/content02.png) left center no-repeat;
+	background-position: 198px 116px;
+}
+#t a{
+	float:left;
+	margin-left: 35px;
+	margin-top: 20px;
+}
+#txt{
+	font-size: 28px;
+	font-family: "微软雅黑";
+	color:#fff;
+	margin-left: 91px;
+	margin-right: 101px;
+	padding-top: 307px;
+	height: 54px;
+	line-height: 54px;
+}
+/* 02 内容-图片 */
+#pic{
+	margin:0 35px;
+}
+#pic li{
+	margin:0 93px;
+	float:left;
+	list-style-type: none;
+	display: inline;
+	text-align: center;
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+#pic img{
+	display: block;
+}

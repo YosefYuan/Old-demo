@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="test" id='btn' />
+		<script type="text/javascript">
+			var btn=document.getElementById('btn');
+			btn.onclick=function(e){
+				alert(e.eventPhase);
+			}
+			document.body.addEventListener('click',function(e){
+				alert(e.eventPhase);
+			},true);
+			/*document.body.addEventListener('click',function(e){
+				alert(e.eventPhase);
+			});*/
+			document.body.onclick=function(e){
+				alert(e.eventPhase);
+			}
+		</script>
+	</body>
+</html>

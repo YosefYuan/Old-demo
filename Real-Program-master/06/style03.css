@@ -1,0 +1,136 @@
+/* all */
+*{
+	padding:0;
+	margin:0;
+}
+.l{
+	float: left;
+}
+.r{
+	float: right;
+}
+#all{
+	width:640px;
+	height: 1136px;
+	background-color: #29bde0;
+	margin:0 auto;
+	font-family: "微软雅黑";
+	position: relative;
+}
+/* header */
+#header{
+	width:100%;
+	height: 40px;
+}
+/* nav */
+#nav{
+	width:100%;
+	height: 88px;
+	line-height: 88px;
+	background-color: #29bde0;
+	color: #fff;
+	font-size: 32px;
+	text-align: center;
+}
+ #nav img:first-child{
+	margin-left: 20px;
+	margin-top: 25px;
+} 
+#nav img:last-child{
+	margin-right: 18px;
+	margin-top: 25px;
+} 
+/* content */
+#content{
+	margin:0 75px;
+	width:auto;
+	height: 623px;
+	background-color: #29bde0;
+}
+#content .center{
+	text-align: center;
+	font-size: 48px;
+	height: 240px;
+	background: url(images03/content.png) center center no-repeat;
+	background-color: #29bde0;
+}
+#content .center p{
+	padding-top: 146px;
+	color: #fff;
+}
+#normal{
+	text-align: justify;
+}
+#normal h1{
+	color: #ffc865;
+	margin-bottom: 60px;
+}
+#normal p,table{
+	color: #fff;
+}
+#normal p,#t01,#t02{
+	font-size:24px;
+}
+#t01 tr{
+	display: inline-block;
+	width: 120px;
+	margin-right: 42px;
+}
+#t01 th{
+	width: 75px;
+}
+#t02 td{
+	padding-left: 20px;
+}
+/* detail */
+#detail{
+	width: auto;
+	height: 383px;
+	padding: 0 75px;
+	background-color: #fff;
+	overflow: hidden;
+}
+#detail .num{
+	border-top: solid 2px #dddddd;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#detail .num h1{
+	color: #515151;
+	margin-bottom: 20px;
+}
+#detail .num table{
+	color:#a6a6a6;
+}
+/* subm */
+#subm01{
+	position: absolute;
+	left: 0;
+	bottom:0;
+	width: 100%;
+	height: 130px;
+	background-color: #29bde0;
+	opacity: 0.5;
+}
+#subm02{
+	position: absolute;
+	left: 0;
+	bottom:0;
+}
+#subm02 button{
+	width: 270px;
+	height: 85px;
+	margin:22px 22px;
+	font-size: 38px;
+	color: #fff;
+	font-family: "微软雅黑";
+	background-color: #888;
+	border-radius: 20px;
+	border:0;
+}
+#subm02 button:first-child{
+	background-color: #f66f6f;
+}
+#subm02 button:last-child{
+	background-color: #fbb435;
+}

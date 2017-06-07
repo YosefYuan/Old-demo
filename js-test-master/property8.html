@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var person={
+				username:'king',
+				sex:'男',
+				get age(){
+					return 12;
+				},
+				set age(val){
+					console.log('不能设置'+val);
+				}
+			};
+			console.log(person.username);
+			console.log(person.age);
+			person.age=13;
+		</script>
+	</body>
+</html>
