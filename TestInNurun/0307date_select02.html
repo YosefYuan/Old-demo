@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js日历</title>
+	<style type="text/css">
+		#jcalendar {
+			width:210px;
+			background:#E0ECF9;
+			border:1px solid #479AC7;
+			float:left;
+		}
+		#jcalendar span {
+			float:left;
+			width:210px;
+			height:20px;
+			background:#479AC7;
+			color:#f90;
+			font-weight:bolder;
+			text-align:center;
+		}
+		#jcalendar .week {
+			background:#D5F3F4;
+			color:#808080;
+		}
+		#jcalendar .current{
+			background:#336699;
+			color:#fff;
+		}
+		#jcalendar a {
+			display:block;
+			float:left;
+			width:30px;
+			height:20px;
+			color:#000;
+			line-height:20px;
+			text-align:center;
+			text-decoration:none;
+		}
+
+	</style>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+	window.onload = function () {
+		/*第一阶段,填空日期数组 */
+		var now = new Date(),
+		date = now.getDate(),//当前天数
+		month = now.getMonth() + 1,//当前的月份
+		year = now.getFullYear(),
+		firstday = new Date(now.getFullYear(),month - 1,1).getDay(),//求出当月的第一天是星期几
+		lastday = new Date(now.getFullYear(),month,0).getDate(),//上月的第0天就是今月的最后一天
+		dates = lastday,//最后一天的号数就是这个月的天数
+		arr = new Array(42);//用来装载日期的数组,日期以'xxxx-xx-xx'的形式表示
+		for (var i = 0,j = firstday; i < dates; i++,j++) {
+			arr[j] = year + '-' + month + "-" +(i+1);
+		}
+		
+		/*第二阶段,绘制UI*/
+		var body = document.getElementsByTagName('body')[0],
+		a = document.createElement('a'),//日历的a元素,用于克隆
+		calendar = document.createElement('div'),//日历的容器
+		thead = document.createElement('span');//日历的头部或页眉
+		body.insertBefore(calendar,null);//把日历加入DOM树中
+		calendar.setAttribute('id','jcalendar');
+		thead.innerHTML = year + "年 " + month + "月";
+		calendar.appendChild(thead);
+		var weeks = "日一二三四五六".split("");//日历第二行的内容，显示星期几
+		for (var i = 0; i < 7; i++) {
+			var th = a.cloneNode();
+			th.innerHTML = weeks[i];
+			th.className = 'week';
+			calendar.appendChild(th);
+		}
+		for(i = 0;i <42;i++){
+			var td = a.cloneNode();
+			if(arr[i] == undefined){
+				calendar.appendChild(td);
+			}else{
+				var html = arr[i].split('-')[2];
+				td.innerHTML = html;
+				if(html == date){
+					td.className = 'current';
+				}
+				calendar.appendChild(td);
+			}
+		}
+	}
+</script>

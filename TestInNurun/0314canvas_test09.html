@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#canvas{clear: both;}
+		、、#zoom{vertical-align: top;}
+	</style>
+</head>
+<body>
+	<!-- part01 -->
+	<!-- <canvas id="canvas" width="300" height="227" border="1px solid #888;"></canvas>
+	<canvas id="zoom" width="300" height="227"></canvas>
+	<canvas id="canvas" width="300" height="227"></canvas>
+	<canvas id="zoom" width="300" height="227"></canvas>
+	<div>
+		<label for="smoothbtn">
+			  <input type="checkbox" name="smoothbtn" checked id="smoothbtn">Enable image smoothing
+		</label>
+	</div>
+	<script type="text/javascript">
+		var img = new Image();
+		img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+		img.onload  = function () {
+			draw(this);
+		};
+	
+		function draw(img) {
+			var canvas = document.getElementById('canvas');
+			var ctx = canvas.getContext('2d');
+			ctx.drawImage(img,0,0);
+			img.style.display = 'none';
+			var zoomctx = document.getElementById('zoom').getContext('2d');
+	
+			var smoothbtn = document.getElementById('smoothbtn');
+			var toggleSmoothing = function (event) {
+				zoomctx.imageSmoothingEnabled = this.checked;
+				zoomctx.mozSmoothingEnabled = this.checked;
+				zoomctx.webkitSmoothingEnabled = this.checked;
+				zoomctx.msSmoothingEnabled = this.checked;
+			};
+			smoothbtn.addEventListener('change',toggleSmoothing);
+	
+			var zoom = function (event) {
+				var x = event.layerX;
+				var y = event.layerY;
+				zoomctx.drawImage(canvas,Math.abs(x - 5),Math.abs(y - 5),10,10,0,0,200,200);
+			};
+			canvas.addEventListener('mousemove',zoom);
+		}
+	</script> -->
+
+
+	<!-- part02 -->
+	<!-- <canvas id="canvas"></canvas>
+	
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas');
+		var ctx = canvas.getContext('2d');
+	
+		ctx.beginPath();
+		ctx.arc(70,80,10,0,2 *Math.PI,false);
+		ctx.fill();
+		ctx.addHitRegion({id:'circle'});
+	
+		canvas.addEventListener('mousemove',function (event) {
+			if(event.region){
+				alert("hit region:" + event.region);
+			}
+		});
+	</script> -->
+
+	<canvas id="canvas"></canvas>
+	<script>
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+
+	ctx.beginPath();
+	ctx.arc(70, 80, 10, 0, 2 * Math.PI, false);
+	ctx.fill();
+	ctx.addHitRegion({id: "circle"});
+
+	canvas.addEventListener("mousemove", function(event){
+	  if(event.region) {
+	    alert("hit region: " + event.region);
+	  }
+	});
+	</script>
+</body>
+</html>

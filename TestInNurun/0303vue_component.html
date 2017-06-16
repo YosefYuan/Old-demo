@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="demo01"></div>
+	<script type="text/javascript">
+		var vm  = new Vue({
+			el:"#demo01",
+			data:{
+				firstName:'Foo',
+				lastName:'Bar',
+				fullName:'Foo Bar'
+			}
+		})
+		vm.$watch('firstName',function (val) {
+			this.fullName = val + ' ' + this.lastName;
+		})
+		vm.$watch('lastName',function (val) {
+			this.fullName = this.firstName + ' ' + val; 
+		})
+	</script>
+
+	<div id="demo02">
+		<p>{{message}}</p>
+		<input v-model = "message" name="">
+	</div>
+	<script type="text/javascript">
+		var demo02 = new Vue({
+			el:"#demo02",
+			data:{
+				message:'Hello nurun'
+			}
+		})
+	</script>
+<hr>
+	<div id="demo03">
+		<select v-model = "selected">
+			<option selected>A</option>
+			<option>B</option>
+			<option>C</option>
+		</select>
+		<span>Selected: {{selected}}</span>
+	</div>
+	<script type="text/javascript">
+		var demo03 = new Vue({
+			el:'#demo03',
+			data:{
+				selected:''
+			}
+		})
+	</script>
+	<hr>
+
+	<ul id="demo04">
+		<li v-for = 'item,index  in items' :class="'item-'+index">
+			{{parentMessage}} - {{index}} - {{item.message}}
+		</li>
+	</ul>
+	<!-- <button id=""></button> -->
+	<script type="text/javascript">
+		var demo04 = new Vue({
+			el:"#demo04",
+			data:{
+				parentMessage:'Parent',
+				items:[
+					{message:'Foo'},
+					{message:'Bar'}
+				]
+			}
+		})
+	</script>
+
+	<hr>
+	<div id="demo05">
+		<button v-on:click = 'count += 1'>增加1</button>
+		<p>这个按钮被点击了{{count}}次.</p>
+	</div>
+	<script type="text/javascript">
+		var demo05 = new Vue({
+			el:"#demo05",
+			data:{
+				count:0
+			}
+		})
+	</script>
+
+	<hr>
+
+	<div id="demo06">
+		<button v-on:click = 'greet'>Greet</button>
+	</div>
+	<script type="text/javascript">
+		var demo06 = new Vue({
+			el:'#demo06',
+			data:{
+				name:'vue.js'
+			},
+			methods:{
+				greet:function () {
+					alert('Hello ' + this.name + '!');
+					alert(event.target.tagName);
+				}
+			}
+		})
+	</script>
+<hr>
+	<div id="demo07">
+		<button v-on:click = "say('Jesus loves me')">JESUS</button>
+		<button v-on:click = "say('I')">Myself</button>
+	</div>
+	<script type="text/javascript">
+		var demo07 = new Vue({
+			el:"#demo07",
+			methods:{
+				say:function (msg) {
+					alert(msg);
+				}
+			}
+		})
+	</script>
+	<hr>
+
+	<div id="demo08">
+		<input v-on:keyup.enter = "say('enter')">
+	</div>
+	<script type="text/javascript">
+		var demo08 = new Vue({
+			el:"#demo08",
+			methods:{
+				say:function (val) {
+					alert(val);
+				}
+			}
+		})
+	</script>
+
+	<hr>
+	<div id="demo09">
+			<!-- <input type="checkbox" id="checkbox" v-model = "checked">
+			<label for="checkbox">{{checked}}</label> -->
+			<input type="checkbox" id="checkbox" v-model="checked">
+			<label for="checkbox">{{ checked }}</label>
+	</div>
+	<script type="text/javascript">
+		var demo09 = new Vue({
+			el:"#demo09",
+			data:{
+				checked:false
+			}
+		})
+	</script>
+	<hr>
+
+	<div id="demo10">
+		<input type="checkbox" id="jack" value="jack" v-model="checkedNames">
+		<label for="jack">Jack</label>
+		<input type="checkbox" id="john" value="john" v-model="checkedNames">
+		<label for="john">john</label>
+		<input type="checkbox" id="mike" value="mike" v-model="checkedNames">
+		<label for="mike">mike</label>
+		<p>Checked names:{{checkedNames}}</p>
+	</div>
+	<script type="text/javascript">
+		var demo10 = new Vue({
+			el:"#demo10",
+			data:{
+				checkedNames:[]
+			}
+		})
+	</script>
+	<hr>
+	<div id="demo11">
+		<input type="radio" value="one" id="one" v-model="pick">
+		<label for="one">one</label>
+		<input type="radio" value="two" id="two" v-model="pick">
+		<label for="two">two</label>
+		<p>Pick:{{ pick }}</p>
+	</div>
+	<script type="text/javascript">
+		var demo11 = new Vue({
+			el:"#demo11",
+			data:{
+				pick:''
+			}
+		})
+	</script>
+	<hr>
+	<div id="demo12">
+		<select v-model="selected" >
+			<option>A</option>
+			<option>B</option>
+			<option>C</option>
+		</select>
+		<p>Selected:{{selected}}</p>
+	</div>
+	<script type="text/javascript">
+		var demo12 = new Vue({
+			el:"#demo12",
+			data:{
+				selected:'未选择'
+			}
+		})
+	</script>
+	<hr>
+	<div id="demo13">
+		<select v-model="selected" multiple>
+			<option>A</option>
+			<option>B</option>
+			<option>C</option>
+		</select>
+		<p>Selected:{{selected}}</p>
+	</div>
+	<script type="text/javascript">
+		var demo13 = new Vue({
+			el:"#demo13",
+			data:{
+				selected:[]
+			}
+		})
+	</script>
+</body>
+</html>

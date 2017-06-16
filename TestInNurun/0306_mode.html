@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			float: left;
+			height: 100%;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<a href="#test">test</a>
+<p>
+var undefined = "hello world";
+console.log(undefined); //会输出"hello world"
+}
+console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}console.log(undefined); //输出undefined
+对的，你可以在一个函数上下文内以undefined做为变量名，于是在这个上下文写的代码便只能通过从全局作用域来取到undefined，如：
+
+window.undefined //浏览器环境
+GLOBAL.undefined //Node环境
+但要注意的是，即便window, GLOBAL仍然可以在函数上下文被定义，故从window/GLOBAL上取undefined并不是100%可靠的做法。如：
+
+function x() {
+var undefined = 'hello world',
+f = {},
+window = {
+'undefined': 'joke'
+};
+console.log(undefined);// hello world
+console.log(window.undefined); //joke
+console.log(f.a === undefined); //false
+console.log(f.a === void 0); //true
+}
+于是，采用void方式获取undefined便成了通用准则。如underscore.js里的isUndefined便是这么写的：
+
+_.isUndefined = function(obj) {
+return obj === void 0;
+}}}
+</p>
+	<div id="test">100</div>
+
+</body>
+</html>

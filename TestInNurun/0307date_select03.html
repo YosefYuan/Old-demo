@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js日历</title>
+	<style type="text/css">
+		#jcalendar {
+			width:210px;
+			background:#E0ECF9;
+			border:1px solid #479AC7;
+			float:left;
+		}
+		#jcalendar span {
+			float:left;
+			width:210px;
+			height:20px;
+			background:#479AC7;
+			color:#f90;
+			font-weight:bolder;
+			text-align:center;
+		}
+		#jcalendar .week {
+			background:#D5F3F4;
+			color:#808080;
+		}
+		#jcalendar .current{
+			background:#336699;
+			color:#fff;
+		}
+		#jcalendar a {
+			display:block;
+			float:left;
+			width:30px;
+			height:20px;
+			color:#000;
+			line-height:20px;
+			text-align:center;
+			text-decoration:none;
+		}
+		
+		/* 添加新样式 */
+		#jcalendar .ybn {
+		    color:#000;
+		}
+		#jcalendar .mbn {
+		    color:#000040;
+		}
+		#jcalendar .weekend {
+		    color:#f00!important;
+		}
+		#jcalendar a.day:hover{
+		    background:#99C3F6;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+	var fillArray = function (year,month) {
+		var firstday = new Date(year,month -1,1).getDay(),
+		lastday = new Date(year,month,0).getDate(),
+		dates = lastday,
+		arr = new Array(42);
+		for (var i = 0,j = firstday; i < dates; i++,j++) {
+			arr[j] = year + '-' + month + '-' + (i+1);
+		}
+		return arr;
+	}
+	var nextmonth = function (year,month,date) {
+		month = month + 1;
+		if(month > 12) year = year +1,month = 1;
+		var arr = fillArray(year,month);
+		drawCalendar(arr,year,month,date);
+	}
+	var nextyear = function (year,month,date) {
+		year = year + 1;
+		var arr = fillArray(year,month);
+		drawCalendar(arr,year,month,date);
+	}
+	var premonth = function (year,month,date) {
+		month = month - 1;
+		if(month<1) year = year - 1,month = 12;
+		var arr = fillArray(year,month);
+		drawCalendar(arr,year,month,date);
+	}
+	var preyear = function (year,month,date) {
+		year = year - 1;
+		var arr = fillArray(year,month);
+		drawCalendar(arr,year,month,date);
+	}
+	var drawCalendar = function (arr,year,month,date) {
+		var _calendar = document.getElementById('jcalendar');
+		if(_calendar) _calendar.parentNode.removeChild(_calendar);
+
+		var body = document.getElementsByTagName('body')[0],
+		a = document.createElement('a'),//日历的a元素,用于克隆
+		calendar = document.createElement('div'),//日历的容器元素
+		thead = document.createElement('span');//日历的头部或者页眉
+		body.insertBefore(calendar,null);//日历加入DOM树
+		calendar.setAttribute('id','jcalendar');
+		var args = year + ',' + month + ',' + date,
+		preyear = '<tt class = "ybn" onclick = "preyear('+args+')"><<</tt>',
+		premonth = '<tt class = "mbn" onclick = "premonth('+args+')"><</tt>',
+		nextmonth = '<tt class = "mbn" onclick = "nextmonth('+args+')">></tt>',
+		nextyear = '<tt class = "ybn" onclick = "nextyear('+args+')">>></tt>',
+		str = new Date(args.replace(/,/g,'/')).toLocaleDateString();
+		thead.innerHTML = preyear + ' ' + premonth + ' ' + str + ' ' + nextmonth + ' ' + nextyear;
+		calendar.appendChild(thead);
+		var weeks = "日一二三四五六".split('');//日历第二行内容,显示星期几
+		for (var i = 0; i < 7; i++) {
+			var th = a.cloneNode();
+			th.innerHTML = weeks[i];
+			th.className = 'week';
+			calendar.appendChild(th);
+		}
+		for (var i = 0; i < 42; i++) {
+			var td = a.cloneNode();
+			if(arr[i] == undefined){
+				calendar.appendChild(td);
+			}else{
+				var html = arr[i].split('-')[2];
+				td.innerHTML = html;
+				td.className = 'day';
+				td.href = 'javascript:void(0)';//为IE6准备
+				if(date && html == date){
+					td.className = td.className + ' current';
+				}
+				if(i%7 ==0 ||i%7 ==6){
+					td.className = td.className + ' weekend';
+				}
+				td.onlcick = (function (i) {
+					return function () {
+						alert(i);//后面需要修改
+					}
+				})(arr[i]);
+				calendar.appendChild(td);
+			}
+		}
+	}
+	window.onload = function () {
+		/* 第一阶段,填空日期数组 */
+		var now = new Date(),
+		month = now.getMonth() + 1,
+		year = now.getFullYear(),
+		date = now.getDate(),
+		arr = fillArray(year,month);
+		/*第二阶段,绘制UI*/
+		drawCalendar(arr,year,month,date);
+	}
+</script>

@@ -1,0 +1,89 @@
+<style type="text/css">
+*{margin:0;padding:0;font-family: "微軟正黑體";}
+html{font-size: 100px;}
+</style>
+<div class="selectStyle">
+ <select class="select">
+  <option value="" disabled selected>Select your option</option>
+  <option>SOGO復興館</option>
+  <option>SOGO復興館</option>
+  <option>SOGO復興館</option>
+ </select>
+</div>
+<div class="selectStyle">
+ <select class="select">
+  <option value="" disabled selected>Select your option</option>
+  <option>SOGO復興館</option>
+  <option>SOGO復興館</option>
+  <option>SOGO復興館</option>
+ </select>
+</div>
+<div class="selectStyle">
+ <select class="select">
+  <option value="" disabled selected>Select your option</option>
+  <option>SOGO復興館</option>
+  <option>SOGO復興館</option>
+  <option>SOGO復興館</option>
+ </select>
+</div>
+
+<style type="text/css">
+.select{
+    display:block;
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+    background:none;
+    border:1px solid #cfcfcf;
+    outline:none;
+    -webkit-appearance:none;
+    padding:0 0.1rem;
+    line-height:inherit;
+    color:inherit;
+    cursor:default;
+    font-size:0.21rem;
+    position:relative;
+    z-index:3;
+}
+.select :disabled{
+	color:#cfcfcf;
+}
+.select option{
+    color:#000;
+}
+.select option:hover{
+    color:#000;
+}
+.select option:checked{
+    background:#1e90ff;
+    color:#fff; 
+}
+
+.selectStyle{
+    display:block;
+    overflow:hidden;
+    height:0.75rem;
+    width:3.45rem;
+    border-radius:0;
+    background:#fff right center no-repeat;
+    background-size:auto 80%;
+    color:#cfcfcf;
+    line-height:2;
+    position:relative;
+    z-index:1;
+}
+.selectStyle:before{
+    position:absolute;
+    z-index:1;
+    top:50%;
+    right:0.25rem;
+    margin-top:-2.5px;
+    display:block;
+    width:0;
+    height:0;
+    border-style:solid;
+    border-width:0.12rem 0.1rem 0 0.1rem;
+    border-color:#bfbebe transparent transparent transparent;
+    content:"";
+}
+</style>

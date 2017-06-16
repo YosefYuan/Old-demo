@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <script type="text/javascript">
+		// var now = new Date();
+		// var currentMonth = now.getMonth()-1;//获得当前的月份
+		// var nextMonth = now.getMonth();
+	
+		//用javascript获得某一年的第一个星期一的日期
+		function get(year) {
+			var d = new Date(year,0,1);//注意:1月份传入0
+			var day = d.getDay();
+			d.setDate((8-day)%7 + 1);
+			return d;
+		}
+		var testDay = get(2017);
+		alert(testDay);
+	</script> -->
+
+
+	<!-- <script type="text/javascript">
+		//求前n天或者后n天的日期(用xxxx-xx-xx表示)
+		var showdate = function (n) {
+			var d = new Date();
+			d.setDate(d.getDate()+n);
+			d = d.toLocaleDateString().replace(/[\u4e00-\u9fa5]/g,'-').replace(/-$/,'');
+			return d;
+		}
+		alert(showdate(0));
+	</script> -->
+
+
+	<!-- <script type="text/javascript">
+		var strDate = '2017-3-16';
+		window.alert(strDate.replace(/\b(\w)\b/g,'0$1'));
+	</script> -->
+
+	<!-- <script type="text/javascript">
+		Date.prototype.Format = function (fmt) {
+			var o = {
+				"M+":this.getMonth()+1,
+				"d+":this.getDate(),
+				"h+":this.getHours(),
+				"m+":this.getMinutes(),
+				"s+":this.getSeconds(),
+				"q+":Math.floor((this.getMonth()+3)/3),
+				"S":this.getMilliseconds()
+			};
+			if(/(y+)/.test(fmt))
+				fmt = fmt.replace(RegExp.$1.(this.getFullYear()+"").substr(4 - RegExp.$1.length));
+			for(var k in o)
+				if(new RegExp("("+k+")").test(fmt))
+					fmt = fmt.replace(RegExp.$1,(RegExp.$1.length==1) ? (o[k]) : (("00" + o[k]).substr((""+o[k]).length)));
+			return fmt;
+		}
+	</script> -->
+
+	<script type="text/javascript">
+		window.onload = function () {
+			/*第一阶段,填空日期数组 */
+			var now = new Date(),
+			date = now.getDate(),//当前天数
+			month = now.getMonth() + 1,//当前的月份
+			year = now.getFullYear(),
+			firstday = new Date(now.getFullYear(),month - 1,1).getDay(),//求出当月的第一天是星期几
+			lastday = new Date(now.getFullYear(),month,0).getDate(),//上月的第0天就是今月的最后一天
+			dates = lastday,//最后一天的号数就是这个月的天数
+			arr = new Array(42);//用来装载日期的数组,日期以'xxxx-xx-xx'的形式表示
+			for (var i = 0,j = firstday; i < dates; i++,j++) {
+				arr[j] = year + '-' + month + "-" +(i+1);
+			}
+			/*测试*/
+			for (var i = 0; i < 42; i++) {
+				document.write(arr[i]+" ");
+			}
+		}
+	</script>
+</body>
+</html>

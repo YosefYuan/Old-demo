@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+	<style type="text/css">
+		/* .toptxt{overflow: hidden;}
+		.txt{height: 40px;line-height: 40px;background: #888;float:left;} */
+		.toptxt {
+			color: #fff;
+			background-color: #888;
+			font-size: 14px;
+			height: 37px;
+			line-height: 37px;
+			text-align: right;
+			overflow: hidden;
+		}
+		.toptxt .txt{
+		    height: 37px;
+		    float: left;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function() {
+			var topTxt = $('.toptxt');
+			var txt = topTxt.find('.txt');
+			var txt2 = txt.clone();
+			txt.after(txt2);
+			topTxt.find('.txt').css('width', topTxt.width());
+			function running() {
+				if (topTxt.scrollLeft() - txt.width() >= 0) {
+					topTxt.scrollLeft(0);
+				} else {
+					var aa = topTxt.scrollLeft();
+					aa++;
+					topTxt.scrollLeft(aa);
+				}
+				setTimeout(running, 20);
+			}
+			var marquee = setTimeout(running, 20);
+		})
+	</script>
+</head>
+<body>
+	<div class="toptxt">
+		<div class="txt"><a style="color:#fff;">新客首次註冊消費滿$599加贈潔顏油旅行組，結帳代碼【SHUONCE】新客首次註冊消費滿$599加贈潔顏油旅行組，結帳代碼【SHUONCE】新客首次註冊消費滿$599加贈潔顏油旅行組，結帳代碼【SHUONCE】新客首次註冊消費滿$599加贈潔顏油旅行組，</a></div>
+	</div>
+</body>
+</html>

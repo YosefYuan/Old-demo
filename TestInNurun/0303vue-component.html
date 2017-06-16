@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<!-- 全局注册组件 -->
+	<div id="demo01">
+		<my-component></my-component>
+	</div>
+	<script type="text/javascript">
+		Vue.component('my-component',{
+			template:'<div>A custom component!</div>'
+		})
+		var demo01 = new Vue({
+			el:"#demo01"
+		})
+	</script>
+	<hr>
+	<!-- 局部注册组件 -->
+	<div id="demo02">
+		<my-component></my-component>
+	</div>
+	<script type="text/javascript">
+		var child = {
+			template:'<div>A custom component!!!</div>'
+		}
+		var demo02 = new Vue({
+			el:"#demo02",
+			components:{
+				'my-component':child
+			}
+		})
+	</script>
+
+	<hr>
+
+	<div id="demo03">
+		<simple-counter></simple-counter>
+		<simple-counter></simple-counter>
+		<simple-counter></simple-counter>
+	</div>
+	<script type="text/javascript">
+		var data = {counter:0}
+		Vue.component('simple-counter',{
+			template:'<button v-on:click="counter +=1">{{counter}}</button>',
+			data:function () {
+				return data
+			}
+		})
+		var demo03 = new Vue({
+			el:"#demo03"
+		})
+	</script>
+	<hr>
+	<div id="demo04">
+		<simple-counter></simple-counter>
+		<simple-counter></simple-counter>
+		<simple-counter></simple-counter>
+	</div>
+	<script type="text/javascript">
+		var data = {counter:0}
+		Vue.component('simple-counter',{
+			template:'<button v-on:click="counter +=1">{{counter}}</button>',
+			data:function () {
+				return {
+					counter: 0
+				}
+			}
+		})
+		var demo04 = new Vue({
+			el:"#demo04"
+		})
+	</script>
+	<hr>
+	<div id="demo05">
+		<child message="hello!"></child>
+	</div>
+	<script type="text/javascript">
+		Vue.component('child',{
+			props:['message'],
+			template:'<span>{{ message }}</span>'
+		})
+		var demo05 = new Vue({
+			el:'#demo05'
+		})
+	</script>
+	<hr>
+
+	<div id="demo06">
+		<input v-model="parentMsg" name="">
+		<child v-bind:my-message="parentMsg"></child>
+	</div>
+	<script type="text/javascript">
+		Vue.component('child',{
+			props:['myMessage'],
+			template:'<span>{{ myMessage }}</span>'
+		})
+		var demo06 = new Vue({
+			el:'#demo06'
+		})
+	</script>
+	<hr>
+
+	<div id="demo07">
+		<p>{{ total }}</p>
+		<button-counter v-on:increment="incrementTotal"></button-counter>
+		<button-counter v-on:increment="incrementTotal"></button-counter>
+	</div>
+	<script type="text/javascript">
+		Vue.component('button-counter',{
+			template:'<button v-on:click="increment">{{ counter }}</button>',
+			data:function () {
+				return{
+					counter:0
+				}
+			},
+			methods:{
+				increment:function () {
+					this.counter +=1;
+					this.$emit('increment')
+				}
+			}
+		})
+		var demo07 = new Vue({
+			el:"#demo07",
+			data:{
+				total:0
+			},
+			methods:{
+				incrementTotal:function () {
+					this.total +=1
+				}
+			}
+		}) 
+	</script>
+</body>
+</html>

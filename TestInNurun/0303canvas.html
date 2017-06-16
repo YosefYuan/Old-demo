@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="demo01" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+	<script type="text/javascript">
+		var demo01 = document.getElementById('demo01');
+		var ctx = demo01.getContext('2d');
+		ctx.beginPath();
+		ctx.moveTo(20,20);
+		ctx.lineTo(20,100);
+		ctx.lineTo(70,100);
+		ctx.strokeStyle = "green";
+		ctx.stroke();
+	</script>
+	<hr>
+
+	<canvas id="demo02" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+	<script type="text/javascript">
+		var demo02 = document.getElementById('demo02');
+		var ctx = demo02.getContext('2d');
+		ctx.beginPath();
+		ctx.arc(150,75,50,0,Math.PI);
+		ctx.stroke();
+	</script>
+	<hr>
+
+	<canvas id="demo03" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+	<script type="text/javascript">
+		var demo03 = document.getElementById('demo03');
+		var demo03Context = demo03.getContext('2d');
+		demo03Context.font = "30px Arial";
+		demo03Context.fillText("Hello world",0,150);
+	</script>
+	<hr>
+
+	<canvas id="demo04" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+	<script type="text/javascript">
+		var demo04 = document.getElementById('demo04');
+		var demo04Context = demo04.getContext('2d');
+		demo04Context.font = "30px Arial";
+		demo04Context.strokeText("Hello world",10,100);
+	</script>
+	<hr>
+	
+	<canvas id="demo05" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+	<script type="text/javascript">
+		var demo05 = document.getElementById('demo05');
+		var demo05Context = demo05.getContext('2d');
+		var demo05Grd = demo05Context.createLinearGradient(0,0,200,0);
+		demo05Grd.addColorStop(0,"red");
+		demo05Grd.addColorStop(1,"white");
+		demo05Context.fillStyle = demo05Grd;
+		demo05Context.fillRect(10,10,300,120);
+	</script>
+	<hr>
+
+	<canvas id="demo06" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+	<script type="text/javascript">
+		var demo06 = document.getElementById('demo06');
+		var demo06Context = demo06.getContext('2d');
+		var demo06Grd = demo06Context.createRadialGradient(75,50,5,100,50,100);
+		demo06Grd.addColorStop(0,"red");
+		demo06Grd.addColorStop(1,"white");
+		demo06Context.fillStyle = demo06Grd;
+		demo06Context.fillRect(10,10,300,120);
+	</script>
+	<hr>
+
+	<img id="scream" src="img_the_scream.jpg" width="220">
+	<canvas id="demo07" width="250" height="300" style="border:1px solid #d3d3d3;"></canvas>
+	<script type="text/javascript">
+		var demo07 = document.getElementById('demo07');
+		var demo07Context = demo07.getContext('2d');
+		var img = document.getElementById("scream");
+		img.onload = function () {
+			demo07Context.drawImage(img,10,10);
+		}
+	</script>
+	<hr>
+</body>
+</html>

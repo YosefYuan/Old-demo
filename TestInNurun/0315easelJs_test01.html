@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="easeljs-0.8.2.min.js">
+	</script>
+</head>
+<body onload = "init();">
+	<!-- part01 -->
+	<!-- <canvas id="gameView" width=400 height=400 style="background-color:#ccc;"></canvas>
+
+	<script type="text/javascript">
+		var stage = new createjs.Stage('gameView');
+
+		var text = new createjs.Text("Hello easeljs","36px Arial","#777");
+		stage.addChild(text);
+		stage.update();
+	</script> -->
+
+	<!-- part02 -->
+	<canvas id="demoCanvas" width="500" height="500"></canvas>
+
+	<script type="text/javascript">
+		function init() {
+			var stage = new createjs.Stage('demoCanvas');
+			var circle = new createjs.Shape();
+			circle.graphics.beginFill("DeepSkyBlue").drawCircle(0,0,50);
+			circle.x = 100;
+			circle.y = 100;
+			stage.addChild(circle);
+			stage.update();
+		}
+	</script>
+</body>
+</html>

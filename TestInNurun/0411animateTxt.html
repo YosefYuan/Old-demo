@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animate txt</title>
+</head>
+<body>
+	<style>
+		.colorful{color: #f00;}
+	</style>
+	<div id="test">123456789<br>123456789<br>123456789</div>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			var l = $('#test').html(),
+				i = 0;
+			setInterval(function () {
+				if(i>=l.length){
+					i = 0;
+				}
+				if(l.substring(i).indexOf('<br>')==0){
+					i += 4;
+				}
+				else{
+					var txt = l.substring(0,i) + "<span class = 'colorful'>" + l.charAt(i) + "</span>" + l.substring(i+1);
+					$('#test').html(txt);
+					i++;
+				}
+			},100);
+		})
+	</script>
+</body>
+</html>

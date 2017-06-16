@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+	<!-- <div id="app">{{ message }}</div>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el:"#app",
+			data:{
+				message:'123'
+			}
+		})
+	</script> -->
+
+	
+
+	<!-- <div id="demo">
+	  <button v-on:click="show = !show">
+	    Toggle
+	  </button>
+	  <transition name="fade">
+	    <p v-if="show">hello</p>
+	  </transition>
+	</div>
+
+	<script type="text/javascript">
+		new Vue({
+		  el: '#demo',
+		  data: {
+		    show: true
+		  }
+		})
+	</script>
+
+	<style type="text/css">
+		.fade-enter-active, .fade-leave-active {
+		  transition: opacity .5s
+		}
+		.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+		  opacity: 0
+		}
+	</style> -->
+
+	<div id="app03">
+		<button @click="show = !show">Toggle show</button>
+		<transition name="bounce">
+			<p v-if="show">Look at me!</p>
+		</transition>	
+	</div>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el:"#app03",
+			data:{
+				show:true
+			}
+		})
+	</script>
+	<style type="text/css">
+		.bounce-enter-active{
+			animation: bounce-in .5s;
+		}
+		.bounce-leave-active{
+			animation:bounce-out .5s;
+		}
+		@keyframes bounce-in{
+			0%{
+				transform:scale(0);
+			}
+			50%{
+				transform: scale(1.5)
+			}
+			100%{
+				transform: scale(1);
+			}
+		}
+		@keyframes bounce-out{
+			0%{
+				transform: scale(1);
+			}/*
+			50%{
+				transform: scale(1.5);
+			}*/
+			100%{
+				transform: scale(0);
+			}
+		}
+	</style>
+
+	<link href="https://unpkg.com/animate.css@3.5.1/animate.min.css" rel="stylesheet" type="text/css">
+	<div id="example-3">
+	  <button @click="show = !show">
+	    Toggle render
+	  </button>
+	  <transition
+	    name="custom-classes-transition"
+	    enter-active-class="animated tada"
+	    leave-active-class="animated bounceOutRight"
+	  >
+	    <p v-if="show">hello</p>
+	  </transition>
+	</div>
+	<script type="text/javascript">
+		new Vue({
+		  el: '#example-3',
+		  data: {
+		    show: true
+		  }
+		})
+	</script>
+</body>
+</html>

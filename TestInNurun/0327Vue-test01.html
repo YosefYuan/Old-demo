@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+	<!-- <div id="app">
+		<child msg="123"></child>
+	</div>
+	<script type="text/javascript">
+		Vue.component('child',{
+			props:['msg'],
+			template:'<span>{{ msg }}</span>'
+		})
+		var vm = new Vue({
+			el:"#app"
+		})
+	</script> -->
+
+
+	<!-- <div id="app02">
+		<input v-model="parentMsg">
+		<br>
+		<child :message="parentMsg"></child>
+	</div>
+
+	<script type="text/javascript">
+		var vm = new Vue({
+			el:"#app02",
+			data:{
+				parentMsg:"where are you from"
+			}
+		})
+		Vue.component('child',{
+			props:['message'],
+			template:'<span>{{ message }}</span>'
+		})
+	</script>
+ -->
+
+ 	<div id="app03">
+ 		<p>{{ total }}</p>
+ 		<button-counter v-on:increment="incrementTotal"></button-counter>
+ 		<button-counter v-on:increment="incrementTotal"></button-counter>
+ 		<button-counter v-on:increment="incrementTotal"></button-counter>
+ 		<button-counter v-on:increment="incrementTotal"></button-counter>
+ 		<button-counter v-on:increment="incrementTotal"></button-counter>
+ 		<button-counter v-on:increment="incrementTotal"></button-counter>
+ 		<button-counter v-on:increment="incrementTotal"></button-counter>
+ 	</div>
+
+ 	<script type="text/javascript">
+ 		Vue.component('button-counter',{
+ 			template:'<button v-on:click="increment01">{{ counter }}</button>',
+ 			data:function () {
+ 				return{
+ 					counter:1
+ 				}
+ 			},
+
+ 			methods:{
+ 				increment01:function () {
+ 					this.counter += 1;
+ 					this.$emit('increment');
+ 				}
+ 			}
+ 		})
+ 		new Vue({
+ 			el:'#app03',
+ 			data:{
+ 				total:0
+ 			},
+ 			methods:{
+ 				incrementTotal:function () {
+ 					this.total += 1
+ 				}
+ 			}
+ 		})
+ 	</script>
+
+</body>
+</html>

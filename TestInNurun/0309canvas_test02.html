@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas tutorial</title>
+	<script type="text/javascript">
+		/*part01 彩色方格*/
+		/*function draw() {
+			var ctx = document.getElementById("canvas").getContext('2d');
+			for (var i = 0; i < 6; i++) {
+				for (var j = 0; j < 6; j++) {
+					ctx.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' + Math.floor(255-42.5*j) + ',0)';
+					ctx.fillRect(j*25,i*25,25,25);
+				}
+			}
+		}*/
+
+		/*part02 彩色圆圈*/
+		/*function draw() {
+			var ctx = document.getElementById("canvas").getContext('2d');
+			for (var i = 0; i < 6; i++) {
+				for (var j = 0; j < 6; j++) {
+					ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' + Math.floor(255-42.5*j) + ')';
+					ctx.beginPath();
+					ctx.arc(12.5 + j*25,12.5+i*25,10,0,Math.PI*2,true);
+					ctx.stroke();
+				}
+			}
+		}*/
+
+		/*part03 彩色渐变退晕*/
+		/*function draw() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			//画背景
+			ctx.fillStyle = '#FD0';
+			ctx.fillRect(0,0,75,75);
+			ctx.fillStyle = "#6C0";
+			ctx.fillRect(75,0,75,75);
+			ctx.fillStyle = "#09F";
+			ctx.fillRect(0,75,75,75);
+			ctx.fillStyle = "#F30";
+			ctx.fillRect(75,75,75,75);
+
+			ctx.fillStyle = "#fff";
+			//设置透明度值
+			ctx.globalAlpha = 0.2;
+
+			//画半透明圆
+			for (var i = 0; i < 7; i++) {
+				ctx.beginPath();
+				ctx.arc(75,75,10+10*i,0,Math.PI*2,true);
+				ctx.fill();
+			}
+		}*/
+
+		/*part04*/
+		/*function draw() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+
+			//画背景
+			ctx.fillStyle = 'rgb(255,221,0)';
+			ctx.fillRect(0,0,150,37.5);
+			ctx.fillStyle = 'rgb(102,204,0)';
+			ctx.fillRect(0,37.5,150,37.5);
+			ctx.fillStyle = 'rgb(0,153,255)';
+			ctx.fillRect(0,75,150,37.5);
+			ctx.fillStyle = 'rgb(255,51,0)';
+			ctx.fillRect(0,112.5,150,37.5);
+
+			//画半透明矩形
+			for (var i = 0; i < 10; i++) {
+				ctx.fillStyle = 'rgba(255,255,255,' + (i+1)/10 +')';
+				for (var j = 0; j < 4; j++) {
+					ctx.fillRect(5+i*14,5+j*37.5,14,27,5);
+				}
+			}
+		}*/
+
+		/*part05*/
+		// function draw() {
+		// 	var ctx = document.getElementById("canvas").getContext('2d');
+		// 	for (var i = 0; i < 10; i++) {
+		// 		ctx.lineWidth = 1+i;
+		// 		ctx.beginPath();
+		// 		ctx.moveTo(5+i*14,5);
+		// 		ctx.lineTo(5+i*14,140);
+		// 		ctx.stroke();
+		// 	}
+		// }
+
+		/*part05-02 */  //距离相等
+		// function draw() {
+		// 	var ctx = document.getElementById("canvas").getContext('2d');
+		// 	for (var i = 0; i < 10; i++) {
+		// 		ctx.lineWidth = 1+i;
+		// 		ctx.beginPath();
+		// 		ctx.moveTo(5+i*10+i*(i+1)/2,5);
+		// 		ctx.lineTo(5+i*10+i*(i+1)/2,140);
+		// 		ctx.stroke();
+		// 	}
+		// }
+
+		/*part06*/
+		// function draw() {
+		// 	var ctx = document.getElementById('canvas').getContext('2d');
+		// 	var lineCap = ['butt','round','square'];
+
+		// 	//创建路径
+		// 	ctx.strokeStyle = '#09f';
+		// 	ctx.beginPath();
+		// 	ctx.moveTo(10,10);
+		// 	ctx.lineTo(140,10);
+		// 	ctx.moveTo(10,140);
+		// 	ctx.lineTo(140,140);
+		// 	ctx.stroke();
+
+		// 	//画线条
+		// 	ctx.strokeStyle = "black";
+		// 	for (var i = 0; i < lineCap.length; i++) {
+		// 		ctx.lineWidth = 15;
+		// 		ctx.lineCap = lineCap[i];
+		// 		ctx.beginPath();
+		// 		ctx.moveTo(25+i*50,10);
+		// 		ctx.lineTo(25+i*50,140);
+		// 		ctx.stroke();
+		// 	}
+		// }
+
+		/*part07*/
+		/*function draw() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			var lineJoin = ['round','bevel','miter'];
+			ctx.lineWidth = 10;
+			for (var i = 0; i < lineJoin.length; i++) {
+				ctx.lineJoin = lineJoin[i];
+				ctx.beginPath();
+				ctx.moveTo(-5,15+i*40);
+				ctx.lineTo(35,60+i*40);
+				ctx.lineTo(75,15+i*40);
+				ctx.lineTo(115,60+i*40);
+				ctx.lineTo(155,15+i*40);
+				ctx.stroke();
+			}
+		}*/
+
+		/*part08*/
+		/*function draw() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+
+			//Create gradients
+			var lingrad = ctx.createLinearGradient(0,0,0,150);
+			lingrad.addColorStop(0,'#00ABEB');
+			lingrad.addColorStop(0.5,"#fff");
+			//lingrad.addColorStop(0.5,'#26c000');
+			//lingrad.addColorStop(1,'#fff');
+
+			var lingrad2 = ctx.createLinearGradient(0,50,0,100);
+			lingrad2.addColorStop(0.5,'#000');
+			lingrad2.addColorStop(1,'rgba(0,0,0,0)');
+
+			//assign gradients to fill and stroke styles
+			ctx.fillStyle = lingrad;
+			ctx.strokeStyle = lingrad2;
+
+			//draw shapes
+			ctx.fillRect(10,10,130,130);
+			ctx.strokeRect(50,50,50,50);
+		}*/
+
+	</script>
+	<style type="text/css">
+		canvas{border:1px solid #000;}
+	</style>
+</head>
+<body onload="draw();">
+	<canvas id="canvas" width=150 height=150></canvas>
+</body>
+</html>

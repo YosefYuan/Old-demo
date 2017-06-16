@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas tutorial</title>
+	<script type="text/javascript">
+		/*part01*/
+		/*function draw() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+
+			//创建渐变
+			var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+			radgrad.addColorStop(0,"#A7D30C");
+			radgrad.addColorStop(0.9,'#019F62');
+			radgrad.addColorStop(1,'rgba(1,159,98,0)');
+
+			var radgrad2 = ctx.createRadialGradient(105,105,20,112,120,50);
+			radgrad2.addColorStop(0,'#FF5F98');
+			radgrad2.addColorStop(0.75,'#FF0188');
+			radgrad2.addColorStop(1,'rgba(255,1,136,0)');
+
+			var radgrad3 = ctx.createRadialGradient(95,15,15,102,20,40);
+			radgrad3.addColorStop(0,'#00c9ff');
+			radgrad3.addColorStop(0.8,'#00B5E2');
+			radgrad3.addColorStop(1,'rgba(0,201,255,0)');
+
+			var radgrad4 = ctx.createRadialGradient(0,150,50,0,140,90);
+			radgrad4.addColorStop(0,'#F4F201');
+			radgrad4.addColorStop(0.8,'#E4C700');
+			radgrad4.addColorStop(1,'rgba(228,199,0,0)');
+
+
+			//画图形
+			ctx.fillStyle = radgrad4;
+			ctx.fillRect(0,0,150,150);
+
+			ctx.fillStyle = radgrad3;
+			ctx.fillRect(0,0,150,150);
+
+			ctx.fillStyle = radgrad2;
+			ctx.fillRect(0,0,150,150);
+
+			ctx.fillStyle = radgrad;
+			ctx.fillRect(0,0,150,150)
+		}*/
+
+		/*part02*/
+		/*function draw() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+
+			//创建新image对象，用作图案
+			var img = new Image();
+			img.src = 'Canvas_createpattern.png';
+			img.onload = function () {
+				//创建图案
+				var ptrn = ctx.createPattern(img,'repeat');
+				ctx.fillStyle = ptrn;
+				ctx.fillRect(0,0,150,150);
+			}
+
+		}
+
+		/*part03*/
+		/*function draw() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			ctx.shadowOffsetX = 2;
+			ctx.shadowOffsetY = 2;
+			ctx.shadowBlur = 2;
+			ctx.shadowColor = 'rgba(0,0,0,0.5)';
+			ctx.font = '20px Times New Roman';
+			ctx.fillStyle = 'Black';
+			ctx.fillText('Sample String',5,30);
+		}*/
+
+
+		/*part04*/
+		/*function draw() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			ctx.beginPath();
+			ctx.arc(50,50,30,0,Math.PI*2,true);
+			ctx.arc(50,50,15,0,Math.PI*2,true);
+			ctx.fill('evenodd');
+		}*/
+
+		/*part05*/
+		/*function draw() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			ctx.font = "48px serif";
+			ctx.strokeText('Hello world',10,50);
+		}*/
+
+
+		/*part06*/
+		/*function draw() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			var text = ctx.measureText('foo');
+			alert(text.width);
+		}*/
+
+
+		/*part06*/
+		/*function draw() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			var img = new Image();
+			img.onload = function () {
+				ctx.drawImage(img,0,0);
+				ctx.beginPath();
+				ctx.moveTo(30,96);
+				ctx.lineTo(70,66);
+				ctx.lineTo(103,76);
+				ctx.lineTo(170,15);
+				ctx.stroke();
+			}
+			img.src = 'Canvas_backdrop.png';
+		}*/
+
+		/*part07*/
+		/*function draw() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			var img = new Image();
+			img.onload = function () {
+				for (var i = 0; i < 4; i++) {
+					for (var j = 0; j < 3; j++) {
+						ctx.drawImage(img,j*50,i*38,50,38);
+					}
+				}
+			};
+  			img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';		
+  		}*/
+
+  		/*part08*/
+  		/*function draw() {
+  			var canvas = document.getElementById('canvas');
+  			var ctx = canvas.getContext('2d');
+
+  			//Draw slice
+  			ctx.drawImage(document.getElementById('source'),33,71,104,124,16,18,87,104);
+
+  			//Draw frame
+  			ctx.drawImage(document.getElementById('frame'),0,0);
+  		}*/
+
+
+
+
+	</script>
+	<style type="text/css">
+		canvas{border:1px solid #000;}
+	</style>
+</head>
+<body onload="draw();">
+	<canvas id="canvas" width=150 height=150></canvas>
+	<img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" style="display: none;">
+	<img id="frame" src="Canvas_rhinoceros_frame.png" style="display: none;">
+</body>
+</html>
